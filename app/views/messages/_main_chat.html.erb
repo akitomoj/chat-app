@@ -8,22 +8,7 @@
 </div>
 
 <div class="main_middle">
-  <div class="chat_namedate">
-    <div class="chat_name">TOM
-    </div>
-    <div class="chat_date">2020/10/10 9:30
-    </div>
-  </div>
-    <div class="chat_message">Good Morning!
-    </div>
-  <div class="chat_namedate">
-    <div class="chat_name">Becky
-    </div>
-    <div class="chat_date">2020/10/10 10:30
-    </div>
-  </div>
-    <div class="chat_message">Nice?
-    </div>
+  <%= render partial: 'message', collection: @messages %>
 </div>
 
 <%= form_with model: [@room, @message], class: 'main_lower', local: true do |f| %>
